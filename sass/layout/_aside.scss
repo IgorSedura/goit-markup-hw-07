@@ -1,0 +1,58 @@
+.aside {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+}
+
+.hidden-title {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+.aside-list {
+    list-style: none;
+    display: flex;
+
+}
+
+.aside-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+
+
+.aside-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--title-color);
+    margin-bottom: 10px;
+}
+
+.aside-text {
+    color: #757575;
+    width: 270px;
+}
+
+.aside-icon {
+    width: 270px;
+    height: 120px;
+    background-color: #F5F4FA;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+
+
+}
