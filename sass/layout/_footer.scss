@@ -3,18 +3,12 @@
     padding-top: 60px;
     padding-bottom: 60px;
 
-
 }
-
-
 
 .footer-logo {
     font-family: 'Raleway';
     font-style: normal;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 31px;
-    letter-spacing: 0.03em;
+    @include font(700, 26px, 1.19, 0.03em);
     color: #FFFFFF;
     display: inline-block;
     margin-bottom: 20px;
@@ -26,8 +20,11 @@
     color: var(--white-color);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
 
-
+    }
 }
 
 
@@ -36,27 +33,20 @@
     color: rgba(255, 255, 255, 0.6);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
 
+    }
 }
 
-.footer-address:hover,
-.footer-address:focus,
-.footer-link:hover,
-.footer-link:focus {
-    color: var(--accent-color);
-
-}
 
 .footer-item:not(:last-child) {
     margin-bottom: 9px;
 }
 
 .footer-title {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
+    @include font(700, 14px, 1.14, 0.03em);
     text-transform: uppercase;
     color: #EEEEEE;
     margin-bottom: 20px;
@@ -67,12 +57,10 @@
     height: 44px;
     margin-right: 10px;
 
-
 }
 
 .footer-soc {
     margin-left: 70px;
-
 }
 
 .footer-soc-list {
@@ -88,7 +76,17 @@
     justify-content: center;
     fill: #AFB1B8;
     background-color: rgba(255, 255, 255, 0.1);
-    ;
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+        background-color: var(--accent-color);
+
+    }
+
+    & {
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
 }
 
 
@@ -97,23 +95,9 @@
     fill: #EEEEEE;
 }
 
-.footer-soc-link:hover,
-.footer-soc-link:focus {
-    background-color: var(--accent-color);
-    background-color: var(--accent-color);
-
-}
-
-.footer-soc-link {
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .footer .container {
     display: flex;
 }
-
-
-
 
 .footer-form-imput {
     width: 358px;
@@ -126,14 +110,11 @@
     background-color: #2F303A;
     color: #FFFFFF;
 
-}
+    &::placeholder {
+        @include font(400, 16px, 1.25, 0.03em);
+        color: rgba(255, 255, 255, 0.6);
+    }
 
-.footer-form-imput::placeholder {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.25;
-    letter-spacing: 0.03em;
-    color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-imput-wrap {
@@ -146,10 +127,7 @@
 }
 
 .footer-subscribe {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
+    @include font(700, 14px, 1.14, 0.03em);
     text-transform: uppercase;
     color: #FFFFFF;
     margin-bottom: 20px;
@@ -161,10 +139,7 @@
     background: #2196F3;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
+    @include font(700, 16px, 1.88, 0.06em);
     color: #FFFFFF;
     margin-left: 12px;
     border: none;
@@ -180,6 +155,5 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-
 
 }

@@ -1,24 +1,23 @@
 .checkbox {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+    @include font(400, 14px, 1.71, 0.03em);
     color: #757575;
     display: flex;
     align-items: center;
     cursor: pointer;
+    margin-bottom: 30px;
+
+    &::before {
+        content: "";
+        width: 16px;
+        height: 15px;
+        border: 2px solid #212121;
+        border-radius: 3px;
+        background-image: url();
+        margin-right: 7px;
+    }
 
 }
 
-.checkbox::before {
-    content: "";
-    width: 16px;
-    height: 15px;
-    border: 2px solid #212121;
-    border-radius: 3px;
-    background-image: url();
-    margin-right: 7px;
-}
 
 .checkbox-imput:checked+.checkbox::before {
     background-color: #2196F3;
@@ -32,8 +31,4 @@
 
     border: 2px solid var(--accent-color);
 
-}
-
-.checkbox {
-    margin-bottom: 30px;
 }
